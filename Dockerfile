@@ -1,5 +1,5 @@
 FROM golang:1.14.2-alpine as builder
-MAINTAINER "Gilson Gabriel <gilson@codemastersolucoes.com>"
+MAINTAINER "Francisco Araujo <francisco@opiagile.com>"
 
 WORKDIR /app
 

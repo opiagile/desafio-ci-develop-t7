@@ -1,0 +1,16 @@
+steps:
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      - 'build'
+      - '-t'
+      - 'gcr.io/$PROJECT_ID/code-desafio-ci:latest'
+      - '-t'
+      - 'gcr.io/$PROJECT_ID/code-desafio-ci:alpine'
+      - '.'
+
+  - name: 'gcr.io/$PROJECT_ID/code-desafio-ci:latest'
+    args: ["/app/main"]
+
+images:
+  - 'gcr.io/$PROJECT_ID/code-desafio-ci:latest'
+  - 'gcr.io/$PROJECT_ID/code-desafio-ci:alpine'
